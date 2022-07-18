@@ -1,6 +1,5 @@
-import { sum } from "./modules/sum";
-import './style.css';
+import './style.scss';
+import ServerErrorPage from './pages/500'
 
 const root = document.querySelector('#root');
-
-root.textContent = sum(1,2,3, -2)
+root.innerHTML = ServerErrorPage;
