@@ -1,12 +1,9 @@
-.error-page {
-
-    &__wrapper {
+.error-page-component {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         height: 100%;
-    }
 
     &__number {
         margin-bottom: 20px;

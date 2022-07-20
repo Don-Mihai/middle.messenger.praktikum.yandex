@@ -539,7 +539,7 @@ var _500Default = parcelHelpers.interopDefault(_500);
 const root = document.querySelector("#root");
 root.innerHTML = (0, _500Default.default);
 
-},{"./pages/500":"dhKVG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./style.scss":"81Z0h"}],"dhKVG":[function(require,module,exports) {
+},{"./style.scss":"81Z0h","./pages/500":"dhKVG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"81Z0h":[function() {},{}],"dhKVG":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _errorPage = require("../../components/ErrorPage/ErrorPage");
@@ -551,37 +551,7 @@ const data = {
 };
 exports.default = (0, _errorPageDefault.default)(data);
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../../components/ErrorPage/ErrorPage":"hMUX3"}],"gkKU3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, "__esModule", {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}],"hMUX3":[function(require,module,exports) {
+},{"../../components/ErrorPage/ErrorPage":"hMUX3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hMUX3":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _errorPageHbs = require("./ErrorPage.hbs");
@@ -589,7 +559,7 @@ var _errorPageHbsDefault = parcelHelpers.interopDefault(_errorPageHbs);
 var _errorPageScss = require("./ErrorPage.scss");
 exports.default = (0, _errorPageHbsDefault.default);
 
-},{"./ErrorPage.hbs":"8OX1A","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./ErrorPage.scss":"e9f8i"}],"8OX1A":[function(require,module,exports) {
+},{"./ErrorPage.hbs":"8OX1A","./ErrorPage.scss":"e9f8i","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8OX1A":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _handlebars = require("handlebars");
@@ -604,46 +574,46 @@ const templateFunction = (0, _handlebarsDefault.default).template({
             if (Object.prototype.hasOwnProperty.call(parent, propertyName)) return parent[propertyName];
             return undefined;
         };
-        return '<div class="error-page__wrapper">\r\n    <div class="error-page__number">' + alias4((helper = (helper = lookupProperty(helpers, "number") || (depth0 != null ? lookupProperty(depth0, "number") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+        return '<div class="error-page-component">\r\n    <div class="error-page-component__number">' + alias4((helper = (helper = lookupProperty(helpers, "number") || (depth0 != null ? lookupProperty(depth0, "number") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
             "name": "number",
             "hash": {},
             "data": data,
             "loc": {
                 "start": {
                     "line": 2,
-                    "column": 36
+                    "column": 46
                 },
                 "end": {
                     "line": 2,
-                    "column": 46
+                    "column": 56
                 }
             }
-        }) : helper)) + '</div>\r\n    <div class="error-page__text">' + alias4((helper = (helper = lookupProperty(helpers, "text") || (depth0 != null ? lookupProperty(depth0, "text") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+        }) : helper)) + '</div>\r\n    <div class="error-page-component__text">' + alias4((helper = (helper = lookupProperty(helpers, "text") || (depth0 != null ? lookupProperty(depth0, "text") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
             "name": "text",
             "hash": {},
             "data": data,
             "loc": {
                 "start": {
                     "line": 3,
-                    "column": 34
+                    "column": 44
                 },
                 "end": {
                     "line": 3,
-                    "column": 42
+                    "column": 52
                 }
             }
-        }) : helper)) + '</div>\r\n    <div class="error-page__link-text">' + alias4((helper = (helper = lookupProperty(helpers, "linkText") || (depth0 != null ? lookupProperty(depth0, "linkText") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+        }) : helper)) + '</div>\r\n    <div class="error-page-component__link-text">' + alias4((helper = (helper = lookupProperty(helpers, "linkText") || (depth0 != null ? lookupProperty(depth0, "linkText") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
             "name": "linkText",
             "hash": {},
             "data": data,
             "loc": {
                 "start": {
                     "line": 4,
-                    "column": 39
+                    "column": 49
                 },
                 "end": {
                     "line": 4,
-                    "column": 51
+                    "column": 61
                 }
             }
         }) : helper)) + "</div>\r\n</div>";
@@ -11970,6 +11940,36 @@ PrintVisitor.prototype.HashPair = function(pair) {
 },{"./visitor":"fk5sS"}],"jhUEF":[function(require,module,exports) {
 "use strict";
 
-},{}],"e9f8i":[function() {},{}],"81Z0h":[function() {},{}]},["ShInH","8lqZg"], "8lqZg", "parcelRequirefc40")
+},{}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"e9f8i":[function() {},{}]},["ShInH","8lqZg"], "8lqZg", "parcelRequirefc40")
 
 //# sourceMappingURL=index.975ef6c8.js.map
