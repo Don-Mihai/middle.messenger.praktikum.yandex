@@ -2,13 +2,15 @@ import './style.scss';
 import ErrorPage from './pages/500';
 import NotFound from './pages/404';
 import Sign from './pages/Sign';
+import Reg from './pages/Reg';
 
 const root = document.querySelector('#root');
 
 
 const routes = {
     '/500': ErrorPage,
-    '/sign': Sign
+    '/sign': Sign,
+    '/reg': Reg,
 }
 
 window.onload = () => {

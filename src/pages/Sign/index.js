@@ -1,5 +1,5 @@
 import Sign from './Sign.hbs';
 import './Sign.scss';
-import Form from '../../components/Form';
+import SignForm from '../../components/SignForm';
 
-export default Sign({form: Form})
+export default Sign({form: SignForm})
