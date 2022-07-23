@@ -536,13 +536,25 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _styleScss = require("./style.scss");
 var _500 = require("./pages/500");
 var _500Default = parcelHelpers.interopDefault(_500);
+var _404 = require("./pages/404");
+var _404Default = parcelHelpers.interopDefault(_404);
+var _sign = require("./pages/Sign");
+var _signDefault = parcelHelpers.interopDefault(_sign);
 const root = document.querySelector("#root");
-root.innerHTML = (0, _500Default.default);
+const routes = {
+    "/500": (0, _500Default.default),
+    "/sign": (0, _signDefault.default)
+};
+window.onload = ()=>{
+    const path = window.location.pathname;
+    if (routes[path]) root.innerHTML = routes[path];
+    else root.innerHTML = (0, _404Default.default);
+};
 
-},{"./style.scss":"81Z0h","./pages/500":"dhKVG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"81Z0h":[function() {},{}],"dhKVG":[function(require,module,exports) {
+},{"./style.scss":"81Z0h","./pages/500":"dhKVG","./pages/404":"3mX9L","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./pages/Sign":"fvwIm"}],"81Z0h":[function() {},{}],"dhKVG":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-var _errorPage = require("../../components/ErrorPage/ErrorPage");
+var _errorPage = require("../../components/ErrorPage");
 var _errorPageDefault = parcelHelpers.interopDefault(_errorPage);
 const data = {
     number: 500,
@@ -551,7 +563,7 @@ const data = {
 };
 exports.default = (0, _errorPageDefault.default)(data);
 
-},{"../../components/ErrorPage/ErrorPage":"hMUX3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hMUX3":[function(require,module,exports) {
+},{"../../components/ErrorPage":"hfUcK","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hfUcK":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _errorPageHbs = require("./ErrorPage.hbs");
@@ -11970,6 +11982,320 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}],"e9f8i":[function() {},{}]},["ShInH","8lqZg"], "8lqZg", "parcelRequirefc40")
+},{}],"e9f8i":[function() {},{}],"3mX9L":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _errorPage = require("../../components/ErrorPage");
+var _errorPageDefault = parcelHelpers.interopDefault(_errorPage);
+const data = {
+    number: 404,
+    text: "\u0421\u0442\u0440\u0430\u043D\u0438\u0446\u0430 \u043D\u0435 \u043D\u0430\u0439\u0434\u0435\u043D\u0430",
+    linkText: "\u041D\u0430\u0437\u0430\u0434 \u043A \u0447\u0430\u0442\u0430\u043C"
+};
+exports.default = (0, _errorPageDefault.default)(data);
+
+},{"../../components/ErrorPage":"hfUcK","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fvwIm":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _signHbs = require("./Sign.hbs");
+var _signHbsDefault = parcelHelpers.interopDefault(_signHbs);
+var _signScss = require("./Sign.scss");
+var _form = require("../../components/Form");
+var _formDefault = parcelHelpers.interopDefault(_form);
+exports.default = (0, _signHbsDefault.default)({
+    form: (0, _formDefault.default)
+});
+
+},{"./Sign.hbs":"hJYcC","./Sign.scss":"bW5v1","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../../components/Form":"bNzpy"}],"hJYcC":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _handlebars = require("handlebars");
+var _handlebarsDefault = parcelHelpers.interopDefault(_handlebars);
+const templateFunction = (0, _handlebarsDefault.default).template({
+    "compiler": [
+        8,
+        ">= 4.3.0"
+    ],
+    "main": function(container, depth0, helpers, partials, data) {
+        var stack1, helper, lookupProperty = container.lookupProperty || function(parent, propertyName) {
+            if (Object.prototype.hasOwnProperty.call(parent, propertyName)) return parent[propertyName];
+            return undefined;
+        };
+        return '<div class="wrapper">\r\n    ' + ((stack1 = (helper = (helper = lookupProperty(helpers, "form") || (depth0 != null ? lookupProperty(depth0, "form") : depth0)) != null ? helper : container.hooks.helperMissing, typeof helper === "function" ? helper.call(depth0 != null ? depth0 : container.nullContext || {}, {
+            "name": "form",
+            "hash": {},
+            "data": data,
+            "loc": {
+                "start": {
+                    "line": 2,
+                    "column": 4
+                },
+                "end": {
+                    "line": 2,
+                    "column": 14
+                }
+            }
+        }) : helper)) != null ? stack1 : "") + "\r\n</div>";
+    },
+    "useData": true
+});
+exports.default = templateFunction;
+
+},{"handlebars":"i0QfX","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bW5v1":[function() {},{}],"bNzpy":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _formHbs = require("./Form.hbs");
+var _formHbsDefault = parcelHelpers.interopDefault(_formHbs);
+var _formScss = require("./Form.scss");
+var _fieldText = require("../FieldText");
+var _fieldTextDefault = parcelHelpers.interopDefault(_fieldText);
+var _fieldPassword = require("../FieldPassword");
+var _fieldPasswordDefault = parcelHelpers.interopDefault(_fieldPassword);
+exports.default = (0, _formHbsDefault.default)({
+    loginField: (0, _fieldTextDefault.default)({
+        labelText: "\u041B\u043E\u0433\u0438\u043D"
+    }),
+    passwordField: (0, _fieldPasswordDefault.default)({
+        labelText: "\u041F\u0430\u0440\u043E\u043B\u044C"
+    }),
+    titleText: "\u0412\u0445\u043E\u0434",
+    btnText: "\u0410\u0432\u0442\u043E\u0440\u0438\u0437\u043E\u0432\u0430\u0442\u044C\u0441\u044F",
+    linkText: "\u041D\u0435\u0442 \u0430\u043A\u043A\u0430\u0443\u043D\u0442\u0430?"
+});
+
+},{"./Form.hbs":"2joNN","./Form.scss":"bpFY3","../FieldText":"3Yn76","../FieldPassword":"5R6LF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2joNN":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _handlebars = require("handlebars");
+var _handlebarsDefault = parcelHelpers.interopDefault(_handlebars);
+const templateFunction = (0, _handlebarsDefault.default).template({
+    "compiler": [
+        8,
+        ">= 4.3.0"
+    ],
+    "main": function(container, depth0, helpers, partials, data) {
+        var stack1, helper, alias1 = depth0 != null ? depth0 : container.nullContext || {}, alias2 = container.hooks.helperMissing, alias3 = "function", alias4 = container.escapeExpression, lookupProperty = container.lookupProperty || function(parent, propertyName) {
+            if (Object.prototype.hasOwnProperty.call(parent, propertyName)) return parent[propertyName];
+            return undefined;
+        };
+        return '<form class="sign-component" action="">\r\n    <h3 class="sign-component__title">' + alias4((helper = (helper = lookupProperty(helpers, "titleText") || (depth0 != null ? lookupProperty(depth0, "titleText") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+            "name": "titleText",
+            "hash": {},
+            "data": data,
+            "loc": {
+                "start": {
+                    "line": 2,
+                    "column": 38
+                },
+                "end": {
+                    "line": 2,
+                    "column": 51
+                }
+            }
+        }) : helper)) + '</h3>\r\n    <div class="sign-component__inputs">\r\n        ' + ((stack1 = (helper = (helper = lookupProperty(helpers, "loginField") || (depth0 != null ? lookupProperty(depth0, "loginField") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+            "name": "loginField",
+            "hash": {},
+            "data": data,
+            "loc": {
+                "start": {
+                    "line": 4,
+                    "column": 8
+                },
+                "end": {
+                    "line": 4,
+                    "column": 24
+                }
+            }
+        }) : helper)) != null ? stack1 : "") + "\r\n        " + ((stack1 = (helper = (helper = lookupProperty(helpers, "passwordField") || (depth0 != null ? lookupProperty(depth0, "passwordField") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+            "name": "passwordField",
+            "hash": {},
+            "data": data,
+            "loc": {
+                "start": {
+                    "line": 5,
+                    "column": 8
+                },
+                "end": {
+                    "line": 5,
+                    "column": 27
+                }
+            }
+        }) : helper)) != null ? stack1 : "") + '\r\n    </div>\r\n    <div class="sign-component__actions">\r\n        <button class="sign-component__btn">' + alias4((helper = (helper = lookupProperty(helpers, "btnText") || (depth0 != null ? lookupProperty(depth0, "btnText") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+            "name": "btnText",
+            "hash": {},
+            "data": data,
+            "loc": {
+                "start": {
+                    "line": 8,
+                    "column": 44
+                },
+                "end": {
+                    "line": 8,
+                    "column": 55
+                }
+            }
+        }) : helper)) + '</button>\r\n        <a class="sign-component__link" href="#">' + alias4((helper = (helper = lookupProperty(helpers, "linkText") || (depth0 != null ? lookupProperty(depth0, "linkText") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+            "name": "linkText",
+            "hash": {},
+            "data": data,
+            "loc": {
+                "start": {
+                    "line": 9,
+                    "column": 49
+                },
+                "end": {
+                    "line": 9,
+                    "column": 61
+                }
+            }
+        }) : helper)) + "</a>\r\n    </div>\r\n</form>";
+    },
+    "useData": true
+});
+exports.default = templateFunction;
+
+},{"handlebars":"i0QfX","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bpFY3":[function() {},{}],"3Yn76":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _fieldTextHbs = require("./FieldText.hbs");
+var _fieldTextHbsDefault = parcelHelpers.interopDefault(_fieldTextHbs);
+var _fieldTextScss = require("./FieldText.scss");
+exports.default = (0, _fieldTextHbsDefault.default);
+
+},{"./FieldText.hbs":"jC5xT","./FieldText.scss":"g3aNo","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jC5xT":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _handlebars = require("handlebars");
+var _handlebarsDefault = parcelHelpers.interopDefault(_handlebars);
+const templateFunction = (0, _handlebarsDefault.default).template({
+    "compiler": [
+        8,
+        ">= 4.3.0"
+    ],
+    "main": function(container, depth0, helpers, partials, data) {
+        var helper, alias1 = depth0 != null ? depth0 : container.nullContext || {}, alias2 = container.hooks.helperMissing, alias3 = "function", alias4 = container.escapeExpression, lookupProperty = container.lookupProperty || function(parent, propertyName) {
+            if (Object.prototype.hasOwnProperty.call(parent, propertyName)) return parent[propertyName];
+            return undefined;
+        };
+        return "<div class='field-text-component'>\r\n    <label class='field-text-component__label' for=''>" + alias4((helper = (helper = lookupProperty(helpers, "labelText") || (depth0 != null ? lookupProperty(depth0, "labelText") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+            "name": "labelText",
+            "hash": {},
+            "data": data,
+            "loc": {
+                "start": {
+                    "line": 2,
+                    "column": 54
+                },
+                "end": {
+                    "line": 2,
+                    "column": 67
+                }
+            }
+        }) : helper)) + "</label>\r\n    <input class='field-text-component__input' type='password' placeholder='" + alias4((helper = (helper = lookupProperty(helpers, "labelText") || (depth0 != null ? lookupProperty(depth0, "labelText") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+            "name": "labelText",
+            "hash": {},
+            "data": data,
+            "loc": {
+                "start": {
+                    "line": 3,
+                    "column": 76
+                },
+                "end": {
+                    "line": 3,
+                    "column": 89
+                }
+            }
+        }) : helper)) + "' />\r\n    <div class='field-text-component__warning'>" + alias4((helper = (helper = lookupProperty(helpers, "warningText") || (depth0 != null ? lookupProperty(depth0, "warningText") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+            "name": "warningText",
+            "hash": {},
+            "data": data,
+            "loc": {
+                "start": {
+                    "line": 4,
+                    "column": 47
+                },
+                "end": {
+                    "line": 4,
+                    "column": 62
+                }
+            }
+        }) : helper)) + "</div>\r\n</div>";
+    },
+    "useData": true
+});
+exports.default = templateFunction;
+
+},{"handlebars":"i0QfX","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"g3aNo":[function() {},{}],"5R6LF":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _fieldPasswordHbs = require("./FieldPassword.hbs");
+var _fieldPasswordHbsDefault = parcelHelpers.interopDefault(_fieldPasswordHbs);
+var _fieldPasswordScss = require("./FieldPassword.scss");
+exports.default = (0, _fieldPasswordHbsDefault.default);
+
+},{"./FieldPassword.hbs":"loCQA","./FieldPassword.scss":"cDPZU","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"loCQA":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _handlebars = require("handlebars");
+var _handlebarsDefault = parcelHelpers.interopDefault(_handlebars);
+const templateFunction = (0, _handlebarsDefault.default).template({
+    "compiler": [
+        8,
+        ">= 4.3.0"
+    ],
+    "main": function(container, depth0, helpers, partials, data) {
+        var helper, alias1 = depth0 != null ? depth0 : container.nullContext || {}, alias2 = container.hooks.helperMissing, alias3 = "function", alias4 = container.escapeExpression, lookupProperty = container.lookupProperty || function(parent, propertyName) {
+            if (Object.prototype.hasOwnProperty.call(parent, propertyName)) return parent[propertyName];
+            return undefined;
+        };
+        return "<div class='field-password-component'>\r\n    <label class='field-password-component__label' for=''>" + alias4((helper = (helper = lookupProperty(helpers, "labelText") || (depth0 != null ? lookupProperty(depth0, "labelText") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+            "name": "labelText",
+            "hash": {},
+            "data": data,
+            "loc": {
+                "start": {
+                    "line": 2,
+                    "column": 58
+                },
+                "end": {
+                    "line": 2,
+                    "column": 71
+                }
+            }
+        }) : helper)) + "</label>\r\n    <input class='field-password-component__input' type='text' placeholder='" + alias4((helper = (helper = lookupProperty(helpers, "labelText") || (depth0 != null ? lookupProperty(depth0, "labelText") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+            "name": "labelText",
+            "hash": {},
+            "data": data,
+            "loc": {
+                "start": {
+                    "line": 3,
+                    "column": 76
+                },
+                "end": {
+                    "line": 3,
+                    "column": 89
+                }
+            }
+        }) : helper)) + "' />\r\n    <div class='field-password-component__warning'>" + alias4((helper = (helper = lookupProperty(helpers, "warningText") || (depth0 != null ? lookupProperty(depth0, "warningText") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+            "name": "warningText",
+            "hash": {},
+            "data": data,
+            "loc": {
+                "start": {
+                    "line": 4,
+                    "column": 51
+                },
+                "end": {
+                    "line": 4,
+                    "column": 66
+                }
+            }
+        }) : helper)) + "</div>\r\n</div>";
+    },
+    "useData": true
+});
+exports.default = templateFunction;
+
+},{"handlebars":"i0QfX","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cDPZU":[function() {},{}]},["ShInH","8lqZg"], "8lqZg", "parcelRequirefc40")
 
 //# sourceMappingURL=index.975ef6c8.js.map

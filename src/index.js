@@ -1,5 +1,22 @@
 import './style.scss';
-import ServerErrorPage from './pages/500'
+import ErrorPage from './pages/500';
+import NotFound from './pages/404';
+import Sign from './pages/Sign';
 
 const root = document.querySelector('#root');
-root.innerHTML = ServerErrorPage;
+
+
+const routes = {
+    '/500': ErrorPage,
+    '/sign': Sign
+}
+
+window.onload = () => {
+    const path = window.location.pathname;
+    if (routes[path]) {
+        root.innerHTML = routes[path];
+    } else {
+        root.innerHTML = NotFound;
+    }
+    
+}

@@ -1,4 +1,4 @@
-import NotFound from '../../components/ErrorPage/ErrorPage'
+import NotFound from '../../components/ErrorPage'
 const data = {
     number: 404,
     text: 'Страница не найдена',

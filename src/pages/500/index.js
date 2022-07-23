@@ -1,4 +1,4 @@
-import ErrorPage from '../../components/ErrorPage/ErrorPage'
+import ErrorPage from '../../components/ErrorPage'
 const data = {
     number: 500,
     text: 'Мы уже фиксим',
