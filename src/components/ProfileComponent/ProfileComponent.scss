@@ -1,0 +1,63 @@
+.profile-component {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &__inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &__input {
+        &-wrapper {
+            position: relative;
+        }
+
+        &-value {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+
+    & .field-text-component__label {
+        display: none;
+    }
+
+    & .field-tel-component__label {
+        display: none;
+    }
+
+    &__actions {
+        margin-top: 60px;
+    }
+
+    &__action {
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #EAEAEA;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 13px;
+        color: #3369F3;
+
+        &_exit {
+            color:#FF0000;
+            border-bottom: none;
+        }
+    }
+    
+    &__btn {
+        padding: 12px 0;
+        width: 100%;
+        border: none;
+        border-radius: 8px;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 13px;
+        color: #fff;
+        background-color: #3369F3;
+    }
+}

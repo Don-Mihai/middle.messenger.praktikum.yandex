@@ -3,6 +3,9 @@ import ErrorPage from './pages/500';
 import NotFound from './pages/404';
 import Sign from './pages/Sign';
 import Reg from './pages/Reg';
+import Profile from './pages/Profile';
+import ProfileEditData from './pages/ProfileEditData';
+import ProfileEditPassword from './pages/ProfileEditPassword';
 
 const root = document.querySelector('#root');
 
@@ -11,6 +14,9 @@ const routes = {
     '/500': ErrorPage,
     '/sign': Sign,
     '/reg': Reg,
+    '/profile': Profile,
+    '/profile/edit/data': ProfileEditData,
+    '/profile/edit/password': ProfileEditPassword
 }
 
 window.onload = () => {

@@ -1,0 +1,48 @@
+<div class='profile-component'>
+    {{{image}}}
+    <h3>{{{userName}}}</h3>
+    <div class="profile-component__inputs">
+        <div class="profile-component__input-wrapper">
+            {{{emailField}}}
+            <span class="profile-component__input-value">
+                pochta@yandex.ru
+            </span>
+        </div>
+        <div class="profile-component__input-wrapper">
+            {{{loginField}}}
+            <span class="profile-component__input-value">
+                ivanivanov
+            </span>
+        </div>
+        <div class="profile-component__input-wrapper">
+            {{{nameField}}}
+            <span class="profile-component__input-value">
+                Иван
+            </span>
+        </div>
+        <div class="profile-component__input-wrapper">
+            {{{lastnameField}}}
+            <span class="profile-component__input-value">
+                Иванов
+            </span>
+        </div>
+        <div class="profile-component__input-wrapper">
+            {{{chatNameField}}}
+            <span class="profile-component__input-value">
+                Иван
+            </span>
+        </div>
+        <div class="profile-component__input-wrapper">
+            {{{telField}}}
+            <span class="profile-component__input-value">
+                +7 (909) 967 30 30
+            </span>
+        </div>
+    </div>
+
+    <div class="profile-component__actions">
+        {{#each actions}}
+            {{{this}}}
+        {{/each}}
+    </div>
+</div>
