@@ -3,9 +3,11 @@ import './Profile.scss';
 import ProfileComponent from '../../components/ProfileComponent';
 import FieldText from '../../components/FieldText';
 import FieldTel from '../../components/FieldTel';
+import Avatar from '../../components/Avatar';
 
 export default Profile({
     profile: ProfileComponent({
+        avatar: Avatar(),
         userName: 'Михаил',
         emailField: FieldText({ labelText: 'Почта' }),
         loginField: FieldText({ labelText: 'Логин' }),

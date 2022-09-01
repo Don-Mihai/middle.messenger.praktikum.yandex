@@ -1,4 +1,5 @@
 @import url(../static/fonts/index.scss);
+
 body {
     margin: 0;
     padding: 0;
@@ -15,4 +16,5 @@ body {
     justify-content: center;
     align-content: center;
     align-items: center;
+    flex-direction: column;
 }

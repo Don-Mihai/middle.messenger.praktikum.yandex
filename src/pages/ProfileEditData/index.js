@@ -3,18 +3,18 @@ import './ProfileEditData.scss';
 import ProfileComponent from '../../components/ProfileComponent';
 import FieldText from '../../components/FieldText';
 import FieldTel from '../../components/FieldTel';
+import Avatar from '../../components/Avatar';
 
-export default ProfileEditData({profile: ProfileComponent(
-    ({
+export default ProfileEditData({
+    profile: ProfileComponent({
+        avatar: Avatar(),
         userName: 'Михаил',
-        emailField: FieldText({labelText: 'Почта'}),
-        loginField: FieldText({labelText: 'Логин'}),
-        nameField: FieldText({labelText: 'Имя'}),
-        lastnameField: FieldText({labelText: 'Фамилия'}),
-        chatNameField: FieldText({labelText: 'Имя в чате'}),
-        telField: FieldTel({labelText: 'Телефон'}),
-        actions: [
-            `<button class="profile-component__btn">Сохранить</button>`
-        ]
-    })
-)})
+        emailField: FieldText({ labelText: 'Почта' }),
+        loginField: FieldText({ labelText: 'Логин' }),
+        nameField: FieldText({ labelText: 'Имя' }),
+        lastnameField: FieldText({ labelText: 'Фамилия' }),
+        chatNameField: FieldText({ labelText: 'Имя в чате' }),
+        telField: FieldTel({ labelText: 'Телефон' }),
+        actions: [`<button class="profile-component__btn">Сохранить</button>`],
+    }),
+});
