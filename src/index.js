@@ -23,6 +23,7 @@ const routes = {
 
 window.onload = () => {
     const path = window.location.pathname;
+    console.log(path)
     if (routes[path]) {
         root.innerHTML = routes[path];
     } else {
