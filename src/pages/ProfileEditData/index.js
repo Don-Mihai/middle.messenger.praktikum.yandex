@@ -1,12 +1,22 @@
 import ProfileEditData from './ProfileEditData.hbs';
 import './ProfileEditData.scss';
-import ProfileComponent from '../../components/ProfileComponent';
+import ProfileModule from '../../modules/ProfileModule';
 import FieldText from '../../components/FieldText';
 import FieldTel from '../../components/FieldTel';
 import Avatar from '../../components/Avatar';
+import UploadModal from '../../modules/UploadModal';
+import Modal from '../../components/Modal';
+
+// window.addEventListener('load', (event) => {
+//     const avatarImg = document.querySelector('.avatar-component__overlay')
+//    console.log('loada',avatarImg)
+//    avatarImg.onclick = () => {
+//     console.log('click')
+//    }
+// })
 
 export default ProfileEditData({
-    profile: ProfileComponent({
+    profile: ProfileModule({
         avatar: Avatar(),
         userName: 'Михаил',
         emailField: FieldText({ labelText: 'Почта' }),
@@ -17,4 +27,5 @@ export default ProfileEditData({
         telField: FieldTel({ labelText: 'Телефон' }),
         actions: [`<button class="profile-component__btn">Сохранить</button>`],
     }),
+    modal: Modal({children: UploadModal})
 });

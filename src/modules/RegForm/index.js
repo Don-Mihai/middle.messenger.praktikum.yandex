@@ -1,8 +1,8 @@
 import './RegForm.scss';
 import RegForm from './RegForm.hbs';
-import FieldText from '../FieldText';
-import FieldPassword from '../FieldPassword';
-import FieldTel from '../FieldTel';
+import FieldText from '../../components/FieldText';
+import FieldPassword from '../../components/FieldPassword';
+import FieldTel from '../../components/FieldTel';
 
 export default RegForm({
     mailField: FieldText({ labelText: 'Почта' }),

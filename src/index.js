@@ -6,6 +6,7 @@ import Reg from './pages/Reg';
 import Profile from './pages/Profile';
 import ProfileEditData from './pages/ProfileEditData';
 import ProfileEditPassword from './pages/ProfileEditPassword';
+import Chats from './pages/Chats';
 
 const root = document.querySelector('#root');
 
@@ -16,7 +17,8 @@ const routes = {
     '/reg': Reg,
     '/profile': Profile,
     '/profile/edit/data': ProfileEditData,
-    '/profile/edit/password': ProfileEditPassword
+    '/profile/edit/password': ProfileEditPassword,
+    '/chats': Chats,
 }
 
 window.onload = () => {

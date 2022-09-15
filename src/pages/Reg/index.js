@@ -1,5 +1,5 @@
 import Reg from './Reg.hbs';
 import './Reg.scss';
-import RegForm from '../../components/RegForm';
+import RegForm from '../../modules/RegForm';
 
 export default Reg({form: RegForm})

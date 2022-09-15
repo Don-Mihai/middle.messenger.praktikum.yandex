@@ -1,12 +1,12 @@
 import Profile from './Profile.hbs';
 import './Profile.scss';
-import ProfileComponent from '../../components/ProfileComponent';
+import ProfileModule from '../../modules/ProfileModule';
 import FieldText from '../../components/FieldText';
 import FieldTel from '../../components/FieldTel';
 import Avatar from '../../components/Avatar';
 
 export default Profile({
-    profile: ProfileComponent({
+    profile: ProfileModule({
         avatar: Avatar(),
         userName: 'Михаил',
         emailField: FieldText({ labelText: 'Почта' }),

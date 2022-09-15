@@ -2,18 +2,22 @@
   "name": "test",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "source": "index.html",
   "scripts": {
-    "dev": "parcel index.html",
-    "build": "parcel build index.html"
+    "dev": "parcel",
+    "build": "parcel build"
   },
   "keywords": [],
   "author": "Don Mihai",
   "license": "ISC",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.2",
+    "express": "^4.18.1",
     "parcel": "^2.6.2",
     "parcel-transformer-hbs": "^1.0.4"
   },
-  "extends": "@parcel/config-default"
+  "extends": "@parcel/config-default",
+  "dependencies": {
+    "handlebars": "^4.7.7"
+  }
 }
