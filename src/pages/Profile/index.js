@@ -16,13 +16,13 @@ export default Profile({
         chatNameField: FieldText({ labelText: 'Имя в чате' }),
         telField: FieldTel({ labelText: 'Телефон' }),
         actions: [
-            `<div class="profile-component__action">
+            `<a class="profile-module__action" href="/profile/edit/data">
                 Изменить данные
-            </div>`,
-            `<div class="profile-component__action">
+            </a>`,
+            `<a class="profile-module__action" href="/profile/edit/password">
                 Изменить пароль
-            </div>`,
-            `<div class="profile-component__action profile-component__action_exit">
+            </a>`,
+            `<div class="profile-module__action profile-module__action_exit">
                 Выйти
             </div>`,
         ],
