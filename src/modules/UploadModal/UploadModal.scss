@@ -1,0 +1,56 @@
+.upload-modal-modules {
+    padding: 50px 30px 30px 30px;
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.14);
+    border-radius: 12px;
+    background-color: #fff;
+
+    &__title {
+        margin-bottom: 40px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 20px;
+        color: #1E1E1E;
+    }
+
+    &__inputs {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        flex-grow: 1;
+        gap: 32px;
+    }
+
+    &__actions{
+        margin-top: 62px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 14px;
+    }
+
+    &__btn {
+        padding: 12px 0;
+        width: 100%;
+        border: none;
+        border-radius: 8px;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 13px;
+        color: #fff;
+        background-color: #3369F3;
+    }
+
+    &__error {
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 11px;
+        color: #FF2F2F;
+    }
+}
