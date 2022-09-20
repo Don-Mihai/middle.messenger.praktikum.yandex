@@ -7,14 +7,6 @@ import Avatar from '../../components/Avatar';
 import UploadModal from '../../modules/UploadModal';
 import Modal from '../../components/Modal';
 
-// window.addEventListener('load', (event) => {
-//     const avatarImg = document.querySelector('.avatar-component__overlay')
-//    console.log('loada',avatarImg)
-//    avatarImg.onclick = () => {
-//     console.log('click')
-//    }
-// })
-
 export default ProfileEditData({
     profile: ProfileModule({
         avatar: Avatar(),
