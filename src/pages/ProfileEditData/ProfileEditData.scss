@@ -1,0 +1,11 @@
+.profile-edit-data-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    & .wrapper {
+        width: 510px;
+        gap: 97px;
+    }
+}
